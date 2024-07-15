@@ -4,18 +4,14 @@ import { rooms, customers } from '../localvariables.js';
 const roomRouter = express.Router();
 
 
-// hall data
-
-
-
-
+// hall data with room data
 
 roomRouter.get('/',(req,res)=>{
     res.send({rooms})
 })
 
 
-// creating a room api
+// 1. creating a room api
 
 roomRouter.post('/',(req,res)=>{
     const {body}=req;

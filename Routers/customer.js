@@ -4,7 +4,7 @@ import { customers, rooms } from '../localvariables.js';
 const customerRouter = express.Router();
 
 
-//customer GET api
+//customer with booked data
 
 customerRouter.get('/',(req,res)=>{
     res.send(customers);
@@ -15,6 +15,5 @@ customerRouter.post('/',(req,res)=>{
     customers.push({id:Date.now().toString(),...body,roomid:null})
     res.send({msg:'customer created'})
 })
-
 
 export default customerRouter;
